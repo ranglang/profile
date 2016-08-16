@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我们需要怎样的协作软件</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+# 我们需要怎样的团队协作软件
+---
+name: how
+.left-column[
+  ## 场景
+### - 群聊/私信
+]
+.right-column[
+ ![](http://dn-lqiong.qbox.me/nfile/groupchat1.jpg)
+]
+---
+.left-column[
+  ## 场景
+  ### - 群聊/私信
+  ### - 文件分享
+]
+.right-column[
+ ![](http://dn-lqiong.qbox.me/nfile/searchFile.jpg)
+]
+---
+.left-column[
+  ## 场景
+  ### - 群聊/私信
+  ### - 文件分享
+  ### - 任务追踪
+]
+.right-column[
+ ![](http://dn-lqiong.qbox.me/nfile/quipjob.png)
+]
+---
+.left-column[
+  ## 场景
+  ### - 群聊/私信
+  ### - 文件分享
+  ### - 任务追踪
+  ### - 文档协作
+]
+.right-column[
+ ![](http://dn-lqiong.qbox.me/nfile/quip.jpg)
+]
+---
+.left-column[
+  ## 场景
+  ### - 群聊/私信
+  ### - 文件分享
+  ### - 任务追踪
+  ### - 文档协作
+  ### - 消息机器人
+]
+.right-column[
+  [更多服务](https://pubu.im/integrations)
+ ![](http://dn-lqiong.qbox.me/nfile/charrobot.jpg)
+]
+---
+.left-column[
+  ## 场景
+  ### - 群聊/私信
+  ### - 文件分享
+  ### - 任务追踪
+  ### - 文档协作
+  ### - 消息机器人
+  ### - 更多功能
+]
+.right-column[
+  我们需要哪些更多的场景?
+  - 商务电话(钉钉)
+  - 桌面共享/远程控制(teamviewer)
+  - ...
+]
+---
+name: product
+## Slack
+[slack](https://slack.com/is)号称最好的最好的SaaS产品，让用户工作中不被无关的通知干扰，真正地专注于工作中。
+### 特点
+- 以**频道(channel)**的沟通方式,消息搜索
+- 中心化整合,集成Google Drive、Google+ Hangouts、Twitter、DropboSaaS、Asana、GitHub、RSS、Trello 等各种通讯服务和开发工具。作为企业内部协作的一个整合接口
+
+### 价格
+ - 免费 可搜索消息限制为10K,10个服务集成(github等),存储空间为5GB
+ - 标准 $7/人/月 无以上限制
+
+![](http://dn-lqiong.qbox.me/nfile/slack1.png)
+
+---
+## Trello/Asana/Wrike
+[trello](https://trello.com/)轻量级协同办公工具。团队成员可以用它来创建和分配任务，并跟踪任务进展，Arike,Asana功能相近。
+### 特点
+- 所有任务列表都展示在看板上，代表每项具体任务的任务卡片都展示在任务列表里。
+- 分配任务，基于任务的交流，明确任务分工
+
+### 价格
+ - 免费 基本功能可用
+ - 标准 $9/人/月 允许集成Slack/Github/EvertNote等
+
+![](http://dn-lqiong.qbox.me/nfile/trello.jpg)
+---
+
+## Github/Bitbucket/Gitlab
+[Github](https://github.org/)基于Git的代码托管,将任务或问题分配给issue进行追踪和管理，以issue为中心进行讨论和修订。
+也具有wiki功能，可对文章进行协同编辑。Pull Request(合入请求)机制能在commit前进行代码检视和相应讨论。
+
+### 特点
+- 所有任务列表都展示在看板上，代表每项具体任务的任务卡片都展示在任务列表里。
+- 分配任务，基于任务的交流，明确任务分工
+
+### 价格
+ - Github: 代码公开或开源免费,私密项目$7/人/月
+ - Bitbucket: 5人以下项目免费, 以上$10/人/月
+ - GitLab.com: 无条件免费,可搭建私有Git服务器
+
+---
+## 国内产品简介
+国外产品访问慢，国内的产品差异性不大集成了任务管理和IM的功能，有一些可能在审批/员工日志等方面做得细一点。
+
+### 与Trello/Asana相似
+ - [Teambition](https://www.teambition.com/)/明道//[Worktile](https://worktile.com/)    价格大概是299/人/月
+ - [Tower.im](https://hk.tower.im/) 基本免费,高级版有多人在线视频,团队API
+
+### 与slack相似
+ 零信(所有暂时免费)/[bearychat](https://bearychat.com/) 条件下免费: 最多500位团队成员,10位访客,每日可发送500消息
+
+## 其他
+  - 企业微信，功能大少,没有文件搜索，服务集成
+  - 钉钉 有一定额度的商务电话，没有服务集成,有审批，签到，管理日历
+
+---
+## 更多思考
+- 我们需要团队博客吗?[参考一熊科技](http://bearyinnovative.com/)
+- 能不能只用微信?
+  - 在微信上也能接收和查看来自 [Teambition](),  [worktile](https://worktile.com/club/skills/22602feefc66475a8fa24daab106939e) 的项目新动态和项目进展。
+  - 明道支持将微信消息分享到明道
+
+---
+## 我的建议
+
+
+
+
+    </textarea>
+    <script src="https://dn-lqiong.qbox.me/nfile/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+   </body>
+   </html>
