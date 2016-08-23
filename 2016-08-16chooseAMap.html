@@ -120,15 +120,13 @@ class: center, middle
 # easy中的地图该怎么实现?
 ---
 ## Agenda
-- 使用场景
-- 典型产品介绍
-- 国内产品一览
-- 主要页面截图
-- 更多思考
+- 我们对地图的要求?
+- 百度地图/高德地图能提供什么?
+- 地图是否需要一个主题?
 ---
 name: house
 .left-column[
-  ## 要求
+  ## 需求
 ### 建筑物
 ]
 .right-column[
@@ -143,9 +141,9 @@ name: house
 ---
 name: animation
 .left-column[
-  ## 要求
+  ## 需求
 ### 建筑物
-### 动态效果
+### 动效
 ]
 .right-column[
 - 能现实车/人的移动过程
@@ -158,9 +156,9 @@ name: animation
 ---
 name: distance
 .left-column[
-  ## 要求
+  ## 需求
 ### 建筑物
-### 动态效果
+### 动效
 ### 距离
 ]
 .right-column[
@@ -168,28 +166,24 @@ name: distance
 
  ![](http://developer.baidu.com/map/static/img/js_fn9.jpg)
 ]
+
 ---
 name: dynamic
 .left-column[
-  ## 要求
+  ## 需求
 ### 建筑物
-### 动态效果
+### 动效
 ### 距离
-### 动态性
+### 变化
 ]
 .right-column[
  地图随着用户社交等动作会发生变化
 
 ### 考虑以下场景
- - 停车
- - 增加N个朋友
+ - 增加了N个朋友
  - 可能现实房屋的登记
 
 ]
----
-name:baiduMap
-## 百度地图API JavaScript
-dji
 ---
 name:currentMap
 ## 高德地图API JavaScript
@@ -198,15 +192,24 @@ name:currentMap
 - 行政单位 (逐步选择 中国> 广东>深圳> 龙岗> 坂田)
 - IP定位
 - 路线规划
-
 ---
 name: dynamic
 .left-column[
   ## 百度地图
+### 基本功能
+]
+.right-column[
+  具有基本高德的所有功能
+]
+---
+name: dynamic
+.left-column[
+  ## 百度地图
+### 基本功能
 ### 自定义地图
 ]
 .right-column[
- 定制个性地图是支持用户使用JavaScript API设置地图底图的样式风格
+ 自定义样式风格
 ![](http://dn-lqiong.qbox.me/nfile/jsimg7.jpg)
 ]
 
@@ -217,7 +220,106 @@ name: dynamic
 但其实跟项目关系不大
 
 ---
-## 如何画一个虚拟地图
+## Question:如何画一个虚拟地图
+
+问题转换: 用户需要这个地图干什么?
+
+#### 理由
+产品元素，不能平白无故地加进去.
+
+- 用来定义物品空间。
+
+![](http://dn-lqiong.qbox.me/nfile/ac6eddc451da81cbbb5ae2975166d0160924312f.jpg)
+
+---
+name: house
+.left-column[
+  ## 地图分类
+### 室内
+]
+.right-column[
+  ![](http://dn-lqiong.qbox.me/nfile/Snip20160823_6.png)
+]
+---
+name: house
+.left-column[
+  ## 地图分类
+### 室内
+### 室外
+]
+.right-column[
+  ![](http://dn-lqiong.qbox.me/nfile/112613647491.png)
+]
+---
+## Question:我们需要怎样的室外地图?
+## 问题转换: 什么场景下需要一个地图?
+
+- 我有多个好友分布在多个地方?
+- 我有多个活动的地方?
+- 我需要有些
+
+## 假定基本元素
+- 公共建筑物
+- 道路
+- 房子(初级阶段可以不考虑办公室等场景)
+
+---
+
+## 主要的矛盾
+
+#### 条件: 怎么在制约第一阶段目标下的过多设计
+#### 目的: 但是有保证场景化体验。。。
+#### 要求: 并留下可拓展的基础。
+
+---
+
+## 设计思路
+- 以情节/行为需要设置地图。
+- 地图元素最小化
+
+---
+name: house
+.left-column[
+  ## 绘画地图
+### 选定元素
+]
+.right-column[
+  ![](http://dn-lqiong.qbox.me/nfile/fangzi.png)
+  ![](http://dn-lqiong.qbox.me/nfile/fangzi.png)
+  ![](http://dn-lqiong.qbox.me/nfile/Family_vs_Friends-icon.png)
+  ![](http://dn-lqiong.qbox.me/nfile/Snip20160823_7.png)
+  ![](http://dn-lqiong.qbox.me/nfile/roads-collection_23-2147526159.png)
+]
+---
+name: house
+.left-column[
+  ## 绘画地图
+### 选定元素
+### 选定主题
+]
+.right-column[
+  ### 为什么要选择主题/场景
+  主题/场景。。
+  - 使用感觉是不能脱离一个场景?
+  - 我在这里的场景意味着什么?
+  - 场景意味着人处于环境,包括距离，元素,光线。
+
+  场景是一个很泛的概念，所以我们要设置什么场景,甚至什么元素，和目的?
+]
+---
+name: theme
+.left-column[
+  ## 主题的思考
+### 社交做客(参加聚会)
+### 经营城市类主题
+### 城市类主题
+]
+.right-column[
+  ![](http://dn-lqiong.qbox.me/nfile/Snip20160823_8.png)
+]
+
+---
+
 
     </textarea>
     <script src="https://dn-lqiong.qbox.me/nfile/remark-latest.min.js">
