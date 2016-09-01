@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>风控产品介绍</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+# 征信产品介绍
+---
+## Agenda
+- 征信产品简介
+- 聚合信息服务系统
+- 征信的数据源和数据类型
+- 征信产品的收费方式
+
+---
+## 央行征信
+
+### **直接**申请要求
+申请函应至少包括机构性质、业务种类、业务现状（未结清业务余额及笔数情况）、业务系统与网络条件、申请接入的征信系统名称及接入的理由、拟采取的接入方式、接入实施计划等。
+
+身份证明材料包括：**金融许可证复印件**、营业执照复印件、组织机构代码证复印件等。
+
+
+---
+name: house
+.left-column[
+  ## 芝麻征信
+### 芝麻信用分
+<!-- ### 反欺诈信息验证
+### 行业关注名单 -->
+]
+.right-column[
+ 分值范围 [350,950], 广泛应用于骑行，租车，住宿，租房，婚恋等行业应用。
+
+ 2元/人(月查询2万人以上**免费**)。
+![](http://dn-lqiong.qbox.me/Snip20160831_3.png)
+]
+---
+name: fake
+.left-column[
+  ## 芝麻征信
+### 芝麻信用分
+### 反欺诈信息验证
+]
+.right-column[
+判断用户在业务申请过程中提交的基本信息是否真实。
+
+**0.25元/次**
+
+![](http://dn-lqiong.qbox.me/Snip20160831_1.png)
+]
+---
+name: people
+.left-column[
+  ## 芝麻征信
+### 芝麻信用分
+### 反欺诈信息验证
+### 行业关注名单
+]
+.right-column[
+收录客户在借贷逾期、套现、失信被执行、虚假交易、逾期未还车、逾期未支付等各类场景下的违约行为。
+
+**0.25元/次**
+
+![](http://dn-lqiong.qbox.me/Snip20160831_2.png)
+]
+---
+name: tengxunHoner
+  ## 腾讯征信
+  腾讯信用会根据用户的守约、安全、消费、财富四个维度进行综合评估，在对个人的等级表现上，分数体现为7颗星星，星星等级越高，表示评级分数越高。
+
+  处于**产品内测阶段**。
+---
+name: yinlianzhice
+## 银联智策
+
+对**海量银联卡**你对位置细分、消费偏好细分、持卡人价值细分、卡使用状态细分、跨境消费的细分。
+
+![](http://dn-lqiong.qbox.me/Snip20160831_5.png)
+
+---
+name: fake
+.left-column[
+  ## 天翼征信
+### 甜橙分
+]
+.right-column[
+充分整合通信数据、支付数据、合作方数据及公开数据的基础上，从历史信用、账户等级、还款能力、行为偏好、社交关系五个维度，运用大数据分析建模技术呈现出的用户信用状况。
+
+偿还能力：通信账户+翼支付账户的消费能力,账户等级：通信账户+翼支付账户的实名程度
+![](http://dn-lqiong.qbox.me/Snip20160831_6.png)
+]
+---
+name: fanqizhao
+.left-column[
+  ## 天翼征信
+### 甜橙分
+### 反欺诈服务
+]
+.right-column[
+天翼征信个人反欺诈服务，核心能力来自于拥有的海量**运营商数据**和**翼支付**数据。
+
+通过对海量数据的获取和分析，天翼征信可以从身份、号码、位置、终端信息以及黑名单库等方面来综合验证申请者是否具有欺诈的嫌疑。
+]
+---
+name: fanqizhao
+.left-column[
+  ## 公检法司
+  ### 法海风控
+]
+.right-column[
+  法海风控根据诉讼记录表现信用信息。
+]
+---
+name: fanqizhao
+.left-column[
+  ## 公检法司
+  ### 法海风控
+  ### 汇法网
+]
+.right-column[
+  [汇法网](http://www.lawxin.com/)跟**法海风控**类似。
+  ### 收费标准
+  ![](http://dn-lqiong.qbox.me/Snip20160831_9.png)
+]
+---
+name: fanqizhao
+.left-column[
+  ## 百融金服
+  ### 用户评估报告
+]
+.right-column[
+  ## 用户评估报告
+  百融通过搭建大数据平台，在不同数据源中采集并处理包括通信、SNS、电商交易、虚拟消费、关系链、阅读行为、游戏行为、媒体行为、金融行为、房子、汽车、资产和基础画像等数据，并利用统计学、传统机器学习的方法..
+  ![](http://dn-lqiong.qbox.me/uar_a.png)
+]
+---
+name: fanqizhao
+.left-column[
+  ## 百融金服
+  ### 用户评估报告
+  ### 风险罗盘
+]
+.right-column[
+  ## 风险罗盘
+  支持反欺诈和信用风险评估两大类产品，可进行规则配置和风险洞察，并根据客户实际诉求提供两种对接形式。
+  ![](http://dn-lqiong.qbox.me/16005249.png)
+]
+---
+### 鹏元征信
+#### 类似项目: 中诚信/上海资信
+“天下信用"能凭基本信息查询到信用记录,价格15元/次。
+![](http://dn-lqiong.qbox.me/beary4244234027.png)
+
+---
+## 中智诚
+中智诚反欺诈云平台的理念起源于其多年来为商业银行成功解决信用卡申请欺诈的实践经验。是针对中国快速发展的P2P互联网金融，消费金融，以及小微贷市场量身定做的解决方案。该平台可帮助P2P 运营商和小微贷企业以合理的成本快速、高效地实施反欺诈联防联控，从源头上杜绝主观申请欺诈，进而提高收益。
+---
+
+## 考拉征信
+#### 考拉信用分
+考位信用分根据个人用户信息进行加工、整理、计算后得出的信用评分，是考拉征信对海量信息数据的综合处理和评估，
+主要包含了**用户信用记录**、**履约能力**、身份属性、社交关系、交易行为五个维度。
+
+从形式上来看，考拉分与美国的**FICO信用**评分类似，采用了国际上通行的信用分直观表现信用水平高低。
+考拉分的范围在300分到850分之间，分数越高代表信用程度越好，可以应用于各类生活服务商户与金融机构提供信用评估服务，有助于改善用户服务体验。
+
+例如，用户的考拉分达到某个分值后，在合作商户及金融机构办理租车、住宿、旅游、租房、餐饮、中介服务、保险、信贷理财等产品时，可享受到简化流程、促销折扣等商业政策。
+
+---
+## 聚合信息服务平台
+
+#### 天机风控
+  - 公司:[融360](http://www.rong360.com/)
+  - 风控官网请见[链接](https://tianji.rong360.com/login)
+  - [天机价格表下载](http://dn-lqiong.qbox.me/tianjiCharge.xlsx)
+
+#### 好贷风控
+  - 公司:[好贷网](http://beijing.haodai.com/)
+  - 风控产品官网请见[链接](http://fengkong.haodai.com/)
+  - [好贷价格表下载](http://dn-lqiong.qbox.me/haodaiCharge.xlsx)
+
+#### 其系统
+---
+## 融360/好贷
+   - 整合数十家数据源
+   - 降低单项数据价格,
+   - 提供统一API接口
+![](http://dn-lqiong.qbox.me/Snip20160831_10.png)
+
+---
+## 融360
+![](http://dn-lqiong.qbox.me/Snip20160831_11.png)
+
+---
+## 信息数据源有哪些?
+
+#### 来源
+- 互联网金融、电商平台、公检法司、银联、通信运营商、公用事业缴费、社交数据
+
+#### 输出
+- 信用信息共享、反欺诈、风险预警监测、个人消费能力分析、个人及关联企业信息分析、信用评分
+
+---
+
+### 数据类型有哪些?
+- Number
+ 考拉信用分/芝麻信用分/小米信用分
+- Boolean
+  是否黑名单/是否欺诈
+- String/报告
+ 学历信息/银联数据/
+
+---
+name: number
+.left-column[
+  ## 数据类型
+  ### Number
+]
+.right-column[
+  #### 考拉信用分/芝麻信用分/小米信用分
+  #### 公积金/社保原始数字
+  #### 输入真实性分值(反欺诈信息验证)
+  #### 行业具体表现
+  如在网时长/逾期金额
+  ```
+    AH001001 欠费1-30天 因欠费被停机1-30天
+    逾期金额（元）M01 (0,500]
+  ```
+  #### 相似度
+  相片是否跟另外一张相片的人相似
+]
+---
+name: number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+]
+.right-column[
+  - 是否是活体(活体检测方案)
+]
+---
+name: number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+  ### String
+]
+.right-column[
+  例如银联消费额度情况。
+  ![](http://dn-lqiong.qbox.me/Snip20160901_12.png)
+]
+
+---
+name: number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+  ### String
+]
+.right-column[
+  例如银联消费地域分布。
+  ![](http://dn-lqiong.qbox.me/Snip20160901_13.png)
+]
+---
+name:number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+  ### String
+]
+.right-column[
+  手机归属地。
+
+  ![](http://dn-lqiong.qbox.me/Snip20160901_14.png)
+]
+---
+name:number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+  ### String
+]
+.right-column[
+  公检法司记录
+
+  ![](http://dn-lqiong.qbox.me/Snip20160901_15.png)
+]
+
+---
+name:number
+.left-column[
+  ## 数据类型
+  ### Number
+  ### Boolean
+  ### String
+]
+.right-column[
+  ## 其他信息
+  - 个人担任法人信息查询
+  - 学历信息查询
+  - 车辆状态信息
+  - 驾驶证信息
+  - ....
+]
+---
+name: Charge
+.left-column[
+  ## 收费方式
+  ### Free
+]
+.right-column[
+  ### 免费信息
+  - 融360/好贷会有部分免费数据
+  - 直接接入芝麻征信,在两万次以上查询**芝麻信用分**免费。
+]
+---
+name: Charge
+.left-column[
+  ## 收费方式
+  ### Free
+  ### ByCount
+]
+.right-column[
+  ### 按查询次数收费
+  - 反欺诈方案(芝麻征信)
+
+  - 银联交易分析 单卡查询5元/次，多卡合并查10元/次 (好贷)
+]
+
+---
+name: Charge
+.left-column[
+  ## 收费方式
+  ### Free
+  ### ByCount
+  ### ByShot
+]
+.right-column[
+  ### 按命中收费
+
+   验证的人在黑名单列表的话，需要收费。
+
+   例如: （好贷）
+   ![](http://dn-lqiong.qbox.me/Snip20160901_19.png)
+]
+---
+
+
+    </textarea>
+    <script src="https://dn-lqiong.qbox.me/nfile/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+   </body>
+   </html>
