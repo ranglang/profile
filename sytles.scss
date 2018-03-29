@@ -1,0 +1,308 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
+
+$font-family: 'PT Sans';
+$primary-color: #a0d07e;
+
+html {
+	font-size: 16px;
+}
+
+input, textarea, select {
+  -webkit-appearance: none;
+}
+
+.select-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.dblarrow {
+	position: relative;
+	float: right;
+	margin-left: -26px;
+	padding-bottom: 8px;
+	padding-top: 10px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+.dblarrow b {
+	width: 0; 
+	height: 0; 
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid rgba(0,0,40,0.625);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dblarrow i {
+	width: 0; 
+	height: 0; 
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid rgba(0,0,40,0.625);
+	display: block;
+}
+
+select.choose_state,
+select.choose_state option {
+	background: transparent;
+}
+
+select.choose_state {
+	border: 1px solid #000;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	outline: none;
+	font-size: 1.4em;
+	width: 100%;
+	padding-left: 8px;
+	padding-right: 28px;
+}
+
+
+@mixin font-color($color) {
+	color: $color;
+  text-shadow: 1px 1px 1px rgba($color, 0.004);
+}
+
+@mixin box-shadow($color) {
+	box-shadow:0px 0px 13px $color;
+	-moz-box-shadow:0px 0px 13px $color;
+	-webkit-box-shadow:0px 0px 13px $color;
+}
+
+@mixin border-radius($size) {
+	border-radius: $size;
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: $primary-color;
+	@include font-color(rgba(0,0,40,0.625));
+	
+	font-family: $font-family;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.container {
+	width: 100%;
+	max-width: 424px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	margin: 16px;
+}
+
+h1 {
+	font-size: 3.516em;
+	font-weight: 700;
+	line-height: 1em;
+	margin-right: 8px;
+	margin-bottom: 4px;
+}
+
+h2 {
+	font-size: 1.125em;
+	margin-bottom: 32px;
+}
+
+label {
+	font-size: 0.875em;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	opacity: 0.5;
+	margin-bottom: 2px;
+	margin-top: 24px;
+}
+
+svg {
+	width: 126px;
+	height: 91px;
+	flex: none;
+	margin-bottom: 16px;
+	margin-left: -16px;
+}
+
+.code-text {
+	font-family: monospace;
+	padding: 1px 4px 1px 1px;
+	border: 1px solid lighten($primary-color, 12%);
+	font-weight: 700;
+	font-size: 0.8em;
+	border-radius: 2px;
+	background: lighten($primary-color, 4%);
+	
+	&:nth-of-type(2) {
+		margin-right: 4px;
+	}
+}
+
+.form-style-3 select {
+	@include border-radius(3px);
+	border: none;
+	outline: none;
+	@include font-color(rgba(0,0,40,0.625));
+	background: lighten($primary-color, 12%);
+	height: 32px;
+	font-size: 1em;
+	font-family: $font-family;
+	
+	&:hover, &:active {
+		cursor: pointer;
+	}
+}
+
+
+.form-style-3  input[type=submit]{
+	background: rgba(0,0,40,0.625);
+	border: none;
+	@include border-radius(6px);
+	padding: 12px 8px;
+	@include font-color($primary-color);
+	font-weight: 700;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	font-family: $font-family;
+	letter-spacing: .2em;
+	outline: none;
+	line-height: 1em;
+	margin-top: 48px;
+	margin-bottom: 24px;
+	width: 100%;
+	
+	
+	&:focus {
+		outline: none;
+	}
+	
+	&:hover {
+		@include font-color(white);
+		transform: scale(1.03);
+		cursor: pointer;
+	}
+	
+	&:active {
+		background: rgba(0,0,40,0.825);
+		outline: none;
+		@include font-color(white);
+		@include box-shadow(rgba(0,0,0,.3));
+		cursor: pointer;
+	}
+}
+
+.segmented-control {
+  border: 2px solid rgba(0,0,40,0.325);;
+  @include border-radius(6px);
+  overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+}
+.segmented-control__item {
+  list-style-type: none;
+	width: 100%;
+}
+.segmented-control__input {
+  position: absolute;
+  visibility: hidden;
+}
+.segmented-control__label {
+  display: block;
+  padding: 4px;
+  margin: -1px 0;
+  text-align: center;  
+  cursor: pointer;
+	opacity: 1;
+	font-weight: 700;
+	background: $primary-color;
+	@include font-color(rgba(0,0,0,0.325));
+}
+.segmented-control__item:first-child .segmented-control__label {
+  border-left-width: 0;
+}
+.segmented-control__label:hover {
+  @include font-color(white);
+	background: rgba(0,0,40,0.325);
+}
+
+.segmented-control__label:active {
+	@include font-color(white);
+	background: rgba(0,0,40,0.425);
+}
+
+.segmented-control__input:checked + .segmented-control__label {
+	@include font-color($primary-color);
+	background: rgba(0,0,40,0.325);
+}
+
+
+@media(max-width: 320px) {
+	
+	svg {
+	margin-top: 4px;	
+	}
+	
+	.dropdown-label p {
+		margin-top: 24px;
+	}
+	
+	.segmented-control__item {
+		display: table-cell;
+	}
+	
+	.segmented-control__label {
+		padding: 4px 42px;
+	}
+}	
+
+@media(max-width: 640px) {
+	html {
+		font-size: 14px;
+	}
+	
+	h1 {
+		font-size: 2.4em;
+		margin-bottom: 8px;
+	}
+	
+	h2 {
+		margin-bottom: 18px;
+	}
+	
+	svg {
+		width: 72px;
+		height: 52px;
+		margin-left: -9px;
+		margin-bottom: 6px;
+	}
+	
+	.container {
+		max-width: 320px;
+	}
+	
+	.form-style-3  input[type=submit]{
+		margin-top: 32px;
+	}
+	
+	.code-text {
+		&:nth-of-type(2) {
+			margin-right: 3px;
+		}
+	}
+}
